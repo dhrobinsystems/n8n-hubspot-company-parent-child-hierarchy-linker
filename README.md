@@ -39,6 +39,8 @@ I designed this repository around three rules:
 
 ## How it works
 
+![n8n Workflow Overview](assets/workflow-overview.png)
+
 ```mermaid
 flowchart LR
     A[HubSpot v3 webhook batch] --> B[Verify X-HubSpot-Signature-v3<br/>+ replay window]
