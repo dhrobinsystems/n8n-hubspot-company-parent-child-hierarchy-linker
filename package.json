@@ -1,0 +1,45 @@
+{
+  "name": "n8n-hubspot-company-parent-child-hierarchy-linker",
+  "version": "1.0.0",
+  "description": "n8n + Node.js engine that links HubSpot child companies to their parent accounts with cycle and depth guards, and rolls ARR and deal value up the corporate family tree.",
+  "main": "src/hierarchy-linker.js",
+  "private": false,
+  "license": "MIT",
+  "author": "DH Robin (dhRobin Systems) <robin@dhrobinsystems.com> (https://dhrobinsystems.com)",
+  "homepage": "https://github.com/dhrobinsystems/n8n-hubspot-company-parent-child-hierarchy-linker#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhrobinsystems/n8n-hubspot-company-parent-child-hierarchy-linker.git"
+  },
+  "keywords": [
+    "n8n",
+    "hubspot",
+    "crm",
+    "revops",
+    "company-hierarchy",
+    "parent-child",
+    "arr-rollup",
+    "webhooks"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "jest --runInBand",
+    "build:workflow": "node scripts/build-workflow.js",
+    "build:workflow:check": "node scripts/build-workflow.js --check",
+    "send:test-webhook": "node scripts/send-test-webhook.js"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/test/**/*.test.js"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ]
+  }
+}
